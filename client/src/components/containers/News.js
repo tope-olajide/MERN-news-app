@@ -3,6 +3,20 @@ import NewsItemListing from '../presentation/NewsItemListing';
 import { connect } from 'react-redux'
 
 class News extends Component {
+    componentDidMount(){
+
+        var fakeNews = [{
+            id: '1',
+            title: 'Mad owl chases car',
+            teaser: 'Mad owl seen tormenting drivers in Morecambe'
+        }, {
+            id: '2',
+            title: 'Owl stowaway',
+            teaser: 'Despicable owl impersonates passenger to board flight to Luton'
+        }];
+        
+        this.props.dispatch(fetchNews(fakeNews));
+    }
     render(){
 
         const newsItems = this.props.news.map( (news, i) => {
@@ -12,9 +26,8 @@ class News extends Component {
         return (
             <div>
                 <h2>News Items</h2>
-                <ul>
-                    {newsItems}
-                </ul>
+                {(this.props.news.length > 0) ? <ul>{newsItems}</ul> : <div>Sorry we have no news</div>}
+            
             </div>
         )
     }

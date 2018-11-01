@@ -15,12 +15,9 @@ class App extends Component {
                 <Layout>
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path='/news/:id' component={NewsItemDetail}/>    
+                    <Route path='/news/:id' component={NewsArticle}/>    
                 </Layout>
             </BrowserRouter>
-        </Provider>
-       );
+        </Provider> 
   }
-}
-
 export default App;

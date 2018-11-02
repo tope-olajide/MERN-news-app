@@ -1,21 +1,25 @@
 {
-  "name": "MERN-News-App",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
-  },
+  "name": "MERN-news-app",
+  "version": "1.0.0",
+  "description": "React+NodeJS news web app covering React router v4, Redux, MongoDB, JWT",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently - kill-others \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tope-olajide/MERN-news-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tope-olajide/MERN-news-app/issues"
+  },
+  "homepage": "https://github.com/tope-olajide/MERN-news-app#readme",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
   }
 }

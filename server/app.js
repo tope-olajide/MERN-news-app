@@ -13,9 +13,9 @@ const authCheckMiddleware = require('./middleware/authCheck');
 require('dotenv').config();
 
 let app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT;
 
-const dbURL = process.env.MONGO_DB_URL
+const dbURL = process.env.MONGO_DB_URL 
 
 mongoose.connect(dbURL, function(err){
   if(err){

@@ -5,7 +5,7 @@ class Home extends Component {
 	render(){
 		return (
 			<div>
-				<div>Welcome to Owl News</div>
+				<div>Welcome to MERN news App</div>
 
 				<div>
 					<News />
